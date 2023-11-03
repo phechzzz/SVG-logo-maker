@@ -6,19 +6,21 @@ const {Circle, Square, Triangle} = require('./lib/shapes');
 //take user input and insert it into the text that will create the svg file
 
 function generateSVG(answers){
-    let SVGcontent = `
-    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">`;
+    let shape;
     if (answers.logoShape == 'Circle'){
-        SVGcontent += Circle
+        shape = new Circle();
     }
     if (answers.logoShape == 'Square'){
-        SVGcontent += Square
+        shape = new Square();
     }
     if (answers.logoShape == 'Triangle'){
-        SVGcontent += Triangle
+        shape = new Triangle();
     }
-    SVGcontent += `
-    <text fill=${answers.textColor} textLength="60" lengthAdjust="spacingAndGlyphs">${answers.logoText}</text>
+    shape.setColor(answers.logoColor)
+    
+    let SVGcontent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">`
+    +`${shape.render()}`
+    +`<text x="100" y="125" fill="${answers.textColor}" font-size="50" text-anchor="middle">${answers.logoText}</text>
     </svg>`;
     return SVGcontent;
 }
