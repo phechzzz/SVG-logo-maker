@@ -47,7 +47,7 @@ function init () {
             message: 'Enter a color keyword OR hexadecimal number for your shape color.'
         }
     ]
-}
+
 
 inquirer
     .prompt(questions)
@@ -59,7 +59,7 @@ inquirer
     .catch((error) => {
       console.error('Error:', error);
     });
-
+}
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
