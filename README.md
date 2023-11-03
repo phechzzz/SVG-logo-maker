@@ -21,6 +21,9 @@
   
   ## Tests
   To run the tests, open the repository on your local computer in VS Code or your preferred code editor. Run npm run test in the integrated terminal to see the tests pass.
+
+  ## Sources
+  Code assistance from my tutor, Suresh S Kumar, and the class examples from the OOP module.
   
   ## Questions
 If you have any questions, please feel free to reach out to me at [peytonengborg@gmail.com](mailto:peytonengborg@gmail.com).To see more of my work, check out my [GitHub](https://github.com/phechzzz) page.
